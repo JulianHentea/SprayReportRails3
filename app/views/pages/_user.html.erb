@@ -1,0 +1,14 @@
+<% provide(:title, "Home Page") %>
+	
+<!-- Main Area -->
+<div class="main-area">
+	<div class="container">
+		<div class="row">
+		<% if signed_in? %>
+			<%= render 'shared/page_header' %>
+			<h1>Stories <small>from people you are following.</small></h1>
+			<%= render 'shared/feed' %>
+		<% end %>
+	</div>
+<!-- End Main Area -->
+</div>

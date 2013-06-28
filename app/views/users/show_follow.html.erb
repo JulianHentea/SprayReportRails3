@@ -1,0 +1,20 @@
+<!-- End Main Area -->
+
+</div>
+<div class="main-area">
+	<div class="container">
+		<div class="row">
+			<%= render 'shared/page_header' %>
+			<div class="span8">
+			<%= will_paginate %>
+				<div class="all-users-list">
+						<% if @users.any? %>
+					<ul class="users">
+					<%= render @users %>
+					</ul>
+				</div>
+			<%= will_paginate %>
+			<% end %>
+		</div>
+	</div>
+</div>
