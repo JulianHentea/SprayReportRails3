@@ -52,9 +52,5 @@ class PostsController < ApplicationController
       redirect_to root_url unless current_user?(@post.user)
     end
     
-    private
-    def post_params
-      params.require(:post).permit(:title, :content, :tag_list)
-    end
 end
 

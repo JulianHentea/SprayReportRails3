@@ -106,10 +106,6 @@ class UsersController < ApplicationController
       redirect_to(root_path) if !current_user.admin? || current_user?(user)
     end
 
-#    def user_params
-#       params.require(:user).permit(:name, :email, :password,
-#                                      :password_confirmation, :email_verification_token, :was_email_verified)
-#    end
 
 end
 
