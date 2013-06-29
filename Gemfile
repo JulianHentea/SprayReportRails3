@@ -4,6 +4,12 @@ gem 'rails', '3.2.12'
 gem 'pg'
 gem 'bcrypt-ruby'
 gem 'faker'
+gem 'bootstrap-sass'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'jquery-rails'
+gem 'pony'
+gem 'gravatar_image_tag'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -11,8 +17,5 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
 gem 'pony'
-
-gem 'will_paginate', '~> 3.0'
 gem 'gravatar_image_tag'
