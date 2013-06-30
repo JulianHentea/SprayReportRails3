@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     
   
   def create
-    @post = current_user.posts.build(post_params)
+    @post = current_user.posts.build(params[:post])
     if @post.save
       redirect_to root_url, :flash => { :success => "post created!" }
     else
@@ -32,8 +32,8 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update_attributes(post_params)
-      redirect_to  edit_user_path(current_user), :flash => { :success => "Story updated." }
+    if @post.update_attributes(params[:post])
+      redirect_to  current_user, :flash => { :success => "Story updated." }
     else
       @title = "Update Story"
       render 'edit'

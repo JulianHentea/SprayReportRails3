@@ -1,9 +1,8 @@
 
-		<ul class="nav nav-list">
-    	<li class="active"><%= link_to "Home", root_path, 
-			class: "btn btn-large btn-block btn-primary" %></li>
-    <li><%= link_to " Manage stories", current_user,
-			class: "btn btn-large btn-block " %></li>
-    <li><%= link_to " New Story", new_post_path, 
-			class: " btn btn-large btn-block " %></li>
-    </ul>
+<%= link_to "Home", root_path, 
+			class: " active btn btn-large btn-block btn-primary" %>
+<%= link_to " Manage stories", current_user,
+			class: "btn btn-large btn-block " %>
+<%= link_to " New Story", new_post_path, 
+			class: " btn btn-large btn-block " %>
+ 

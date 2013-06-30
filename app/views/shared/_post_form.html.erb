@@ -3,13 +3,13 @@
   <div class="field">
 			
 		<p>
-		  <%= f.text_field :title, placeholder: "Enter a title..." %>
+		  <%= f.text_field :title,  :style => "width:750px;",placeholder: "Enter a title..." %>
 		</p>
 		<p>
-    	<%= f.text_area :content, placeholder: "Compose new a new story..." %>
+    	<%= f.text_area :content,  :style => "width:750px; height: 140px;", placeholder: "Compose new a new story..." %>
   	</p>
 		<div class="field">
-		  <%= f.text_field :tag_list, placeholder: "Tags (separated by commas)"%>
+		  <%= f.text_field :tag_list,  :style => "width:750px;", placeholder: "Tags (separated by commas)"%>
 		</div>
 	</div>
   <%= f.submit "Update your story", class: "btn btn-large btn-primary" %>
