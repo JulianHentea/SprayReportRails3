@@ -14,9 +14,10 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
-
-
 //= require jquery-ui
 //= require bootstrap-dropdown
+//= require ckeditor/init
+
+//= require highlight_menu
 
 // require turbolinks

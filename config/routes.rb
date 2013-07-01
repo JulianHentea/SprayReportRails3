@@ -1,4 +1,6 @@
 App::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   root :to => "pages#home"
   
   resources :users do
@@ -7,10 +9,12 @@ App::Application.routes.draw do
     end
   end
   
-  resources :posts do
-    resources :comments
-  end
+  # resources :posts do
+  #   resources :comments
+  # end
   
+  resources :comments
+  resources :tags
   
   resources :sessions,      :only => [:new, :create, :destroy]
   resources :posts

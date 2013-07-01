@@ -1,4 +1,24 @@
-<h1>Tags</h1>
-    <% @tags.each do |tag| %>
-      <p><%= link_to tag.name.titleize, tag_path(tag) %></p>
-    <% end %>
+
+
+<% provide(:title, "New story") %>
+<!-- Main Area -->
+<div class="main-area">
+	<div class="container">
+		<div class="row">
+		  <%= render 'shared/page_header' %>
+		  <h1>All Tags</br><small></small></h1>
+			<div class="span8">
+			<ul>
+			  <% @tags.each do |tag| %>
+			    <li>
+			    <%= link_to tag.name, tag_path(tag) %>
+			    &nbsp
+			 	<%= link_to "destroy", tag_path(tag), :method => :delete %>
+				</li>
+				<% end %>
+			</ul>
+		  </div>
+		</div>
+	</div>
+</div>
+<!-- End Main Area -->

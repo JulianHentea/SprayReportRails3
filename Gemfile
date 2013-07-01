@@ -10,6 +10,8 @@ gem 'bootstrap-will_paginate'
 gem 'jquery-rails'
 gem 'pony'
 gem 'gravatar_image_tag'
+gem "ckeditor"
+gem "paperclip"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
