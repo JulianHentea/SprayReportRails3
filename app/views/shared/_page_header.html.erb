@@ -17,21 +17,24 @@
 	</div>
 </div>
 
-<div class="span3 bs-docs-sidebar">
-    <ul class="nav nav-list bs-docs-sidenav afix">
-		<%= link_to "Home", root_path, 
+		<div class="span3 bs-docs-sidebar offset4">
+    		<ul class="nav nav-list bs-docs-sidenav ">
+		    <%= link_to "Home", root_path, 
 					class: "btn btn-large btn-block home-page-menu-item" %>
-		<%= link_to " Manage stories", current_user,
+			<%= link_to "Users", users_path, 
 					class: "btn btn-large btn-block home-page-menu-item" %>
-		<%= link_to " New Story", new_post_path, 
+		    <%= link_to " Manage stories", current_user,
+					class: "btn btn-large btn-block home-page-menu-item" %>
+	    	<%= link_to " New Story", new_post_path, 
 					class: " btn btn-large btn-block home-page-menu-item" %>
-			    </ul>
-			  </div>
+					
+		    <%= link_to "Sign out", signout_path, method: "delete", 
+					class: " btn btn-large btn-block home-page-menu-item" %>
+			
+		  </ul>
+		</div>
 	</div>
 </div>
-
-
-
 <% end %>
 
 
