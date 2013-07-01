@@ -20,10 +20,6 @@ App::Application.routes.draw do
   resources :posts
   resources :relationships, :only => [:create, :destroy]
   
-  get 'tags', to: 'tags#index', as: :tags
-  
-  get 'tag', to: 'tags#show', as: :tag
-  
     
   get '/help',    to: 'pages#help'
   get '/about',   to: 'pages#about'

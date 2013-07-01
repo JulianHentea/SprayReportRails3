@@ -1,9 +1,32 @@
 <h1>Articles Tagged with <%= @tag.name %></h1>
 
 <ul>
-  <% @tag.articles.each do |article| %>
-    <li><%= link_to article.title, article_path(article) %></li>
+  <% @tag.posts.each do |post| %>
+    <li><%= link_to post.title, post_path(post) %></li>
   <% end %>
 </ul>
 
 <%= link_to "All tags", tags_path %>
+
+<% provide(:title, "Tags") %>
+<!-- End Main Area -->
+
+</div>
+<div class="main-area">
+	<div class="container">
+		<div class="row">
+			<%= render 'shared/page_header' %>
+			<div class="span8">
+				<h1>Articles Tagged with <%= @tag.name %></h1>
+
+				<ul>
+				  <% @tag.posts.each do |post| %>
+				    <li><%= link_to post.title, post_path(post) %></li>
+				  <% end %>
+				</ul>
+
+				<%= link_to "All tags", tags_path %>
+			</div>
+		</div>
+	</div>
+</div>
