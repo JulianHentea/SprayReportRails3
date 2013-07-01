@@ -11,7 +11,7 @@
 				Tags: <%= raw @post.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>
 				<h3>Comments (<%= @post.comments.size %>)</h3>
 				<%= render partial: 'posts/comment', collection: @post.comments %>
-				<%= render partial: 'posts/comments_form' %>
+				<%= render partial: 'posts/comment_form' %>
 				<p><%= link_to "Back to Stories List",root_path, 
 					class: "btn btn-small " %></p>
 			</div>
