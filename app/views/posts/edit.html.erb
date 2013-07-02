@@ -10,7 +10,7 @@
 				<%= form_for(@post, html: {multipart: true}) do |f| %>
 					<%= render 'shared/error_messages', :object => f.object %>
 					<p><%= f.text_field :title,:style => "width:605px;", placeholder: "Enter a title..." %></p>
-					<p><%= f.cktext_area :content, :ckeditor => {:uiColor => "#cccccc", :toolbar => "Basic"}, :value => "Compose a new story...", :style => "width:605px; height: 140px;" %></p>
+					<p><%= f.cktext_area :content, value: @post.content, :ckeditor => {:uiColor => "#cccccc", :toolbar => "Basic"} , :style => "width:605px; height: 140px;" %></p>
 					<p><%= f.text_field :tag_list, :style => "width:605px;", placeholder: "Tags (separated by commas)" %></p>
 					<%= f.submit "Update your story", class: "btn btn-large btn-primary" %>
 				<% end %>
